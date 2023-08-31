@@ -2,4 +2,10 @@
   "extends": [
     "github>octokit/.github"
   ]
-}
+}const requestWithAuth = request.defaults({
+  headers: {
+    authorization: "token 0000000000000000000000000000000000000001",
+  },
+});
+const result = await requestWithAuth("GET /user");
+
